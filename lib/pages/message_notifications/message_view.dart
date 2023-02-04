@@ -55,6 +55,6 @@ class WidgetMessageView extends StatelessWidget {
             )
           ],
         ),
-        floatingActionButton: EmergencyButton());
+        floatingActionButton: EmergencyButton('', 1));
   }
 }

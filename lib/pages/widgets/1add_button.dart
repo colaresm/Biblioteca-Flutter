@@ -20,16 +20,15 @@ class AddButton extends StatelessWidget {
           );
         },
         style: TextButton.styleFrom(
-            fixedSize: const Size(265, 44),
+            fixedSize: const Size(100, 44),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(5),
             ),
-            backgroundColor: Colors.blue),
+            backgroundColor: Colors.black),
         label: const Text(
-          "Adicionar médico",
+          "Novo",
           style: TextStyle(
-            fontSize: 18,
-            fontFamily: "Fredoka",
+            fontSize: 14,
             fontWeight: FontWeight.w500,
             color: Colors.white,
           ),

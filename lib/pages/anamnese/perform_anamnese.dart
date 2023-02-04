@@ -66,7 +66,6 @@ class _PerformAnamneseState extends State<PerformAnamnese> {
                                         MainPage("home", "", 0),
                                   ),
                                 );
-                                ;
                               },
                               icon: Icon(
                                 size: 30,

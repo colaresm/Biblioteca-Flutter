@@ -9,6 +9,7 @@ import 'package:libraryWDA/pages/message_notifications/message_view.dart';
 import 'package:libraryWDA/pages/patient_doctors/patient_doctors_list_page.dart';
 import 'package:libraryWDA/pages/doctors_list/doctors_page_list.dart';
 import 'package:libraryWDA/pages/message_notification_detail/widgets/detail_message_view.dart';
+import 'package:libraryWDA/pages/register_and_edit_book/register_and_edit_book.dart';
 import 'package:libraryWDA/pages/specialties/specialites_list_page.dart';
 import 'package:libraryWDA/pages/doctor_details/doctor_details_page.dart';
 import 'package:libraryWDA/pages/patient_settings/patient_settings_page.dart';
@@ -21,9 +22,7 @@ class Routes {
       const ExamsPageList(),
       const PatietsDoctorsList(),
       BookDetails(params),
-      WidgetMessageView(
-          patientId:
-              AuthenticationController.userPayload["patientId"].toString()),
+      RegisterAndEditBook(),
       ExamDetailsPage(params),
       WidgetDetailMessageView(params),
       DoctorsList(params),
@@ -46,7 +45,7 @@ class Routes {
         return 3;
       case 'book-details':
         return 4;
-      case 'messages-page':
+      case 'register-and-edit-book':
         return 5;
       case 'exam-details':
         return 6;
@@ -78,7 +77,7 @@ class Routes {
       case 4:
         return 'book-details';
       case 5:
-        return 'messages-page';
+        return 'register-and-edit-book';
       case 6:
         return 'exam-details';
       case 7:

@@ -24,7 +24,7 @@ class ScheduleButton extends StatelessWidget {
         ),
         icon: const Icon(
           Icons.calendar_today,
-          color: Colors.white,
+          color: Color.fromARGB(255, 226, 151, 151),
         ),
       ),
     );

@@ -26,9 +26,9 @@ class _DefaultButtonState extends State<DefaultButton> {
           style: TextButton.styleFrom(
               fixedSize: const Size(265, 44),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(5),
               ),
-              backgroundColor: Colors.blue),
+              backgroundColor: Colors.black),
           label: Text(
             label.toUpperCase(),
             style: TextStyle(

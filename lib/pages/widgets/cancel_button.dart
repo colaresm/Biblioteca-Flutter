@@ -17,11 +17,12 @@ class _CancelButtonState extends State<CancelButton> {
         onPressed: () {
           function();
         },
-        child: Text('CANCELAR', style: TextStyle(fontSize: 18, color: Colors.white)),
+        child: Text('CANCELAR',
+            style: TextStyle(fontSize: 18, color: Colors.white)),
         style: TextButton.styleFrom(
             fixedSize: const Size(265, 44),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(5),
             ),
             backgroundColor: Colors.grey));
   }
