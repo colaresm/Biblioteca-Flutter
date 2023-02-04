@@ -1,0 +1,9 @@
+,Training accuracy,Test accuracy,Training f1 Score,Test f1 Score,Training precision,Test precision,Training recall,Test recall,cnn,classifier,best params
+0,96.67,96.67,97,97,96.66,96.66,99.59,96.66,restnasnetmobile,SVMpoly,{'C': 32768.0}
+0,95.0,95.0,95,95,95.0,95.0,97.49,95.05,restnasnetmobile,SVMlinear,{'C': 32768.0}
+0,81.67,81.67,82,82,82.47,82.47,91.6,81.92,restnasnetmobile,KNN,{'n_neighbors': 2}
+0,98.33,98.33,98,98,98.44,98.44,100.0,98.28,restnasnetmobile,RANDON FOREST,{'max_depth': 7}
+0,75.0,75.0,74,74,80.56,80.56,74.85,75.7,restnasnetmobile,MLP,"{'activation': 'tanh', 'alpha': 0.0001, 'hidden_layer_sizes': (10, 30, 10), 'learning_rate': 'constant', 'solver': 'adam'}"
+0,76.67,76.67,76,76,81.51,81.51,79.01,77.31,restnasnetmobile,BAYES,{'var_smoothing': 1.1421052631578948e-09}
+0,98.33,98.33,98,98,98.44,98.44,98.34,98.28,restnasnetmobile,BOOSTING,{'n_estimators': 41}
+0,86.67,86.67,87,87,86.65,86.65,100.0,86.65,restnasnetmobile,DECISION TREE,"{'criterion': 'entropy', 'max_depth': 7}"
