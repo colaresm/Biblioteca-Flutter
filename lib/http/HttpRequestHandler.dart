@@ -51,6 +51,7 @@ class HttpRequestHandler {
       headers: getHeaders(),
       body: jsonEncode(body),
     );
+    if (response.statusCode == 400) return throw Exception('Erro');
   }
 
   put(url, body) async {

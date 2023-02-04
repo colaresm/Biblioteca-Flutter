@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:libraryWDA/controllers/authentication_controller.dart';
+import 'package:libraryWDA/controllers/book_controller.dart';
 import 'package:libraryWDA/controllers/patient_controller.dart';
 import 'package:libraryWDA/controllers/publishing_company_controller.dart';
 import 'package:libraryWDA/pages/main/main_page.dart';
@@ -56,13 +57,16 @@ class BookFormState extends State<BookForm> {
   performAnamnese() {
     if (_formKey.currentState!.validate()) {
       adjustDate();
-      PublishingCompanyController.create(_book);
+      BookController.create(_book);
 
       Get.snackbar('Sucesso', 'Livro cadastrado com sucesso',
-          backgroundColor: companyColors.shade400,
+          backgroundColor: Colors.greenAccent,
           borderWidth: 2,
-          icon: Icon(Icons.done),
-          colorText: companyColors.shade100,
+          icon: Icon(
+            Icons.done,
+            color: Colors.white,
+          ),
+          colorText: Colors.white,
           borderColor: Colors.white);
       Navigator.push(
         context,

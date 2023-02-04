@@ -22,6 +22,10 @@ class BookController extends GetxController {
     return httpRequestHandler.getList('/books/list', mapper.toBookListItem);
   }
 
+  static Future<dynamic> create(book) async {
+    return httpRequestHandler.post('/books', book);
+  }
+
   static Future<dynamic> getExamsList(patientId) async {
     return httpRequestHandler.getList(
         '/queries/get-exams-by-patientId/', mapper.toBookListItem);

@@ -23,7 +23,8 @@ class PublishingCompanyController extends GetxController {
         '/publishing-company/list', mapper.toPublishingCompanyListItem);
   }
 
-  static Future<dynamic> create(book) async {
-    return httpRequestHandler.post('/books', book);
+  static Future<dynamic> create(publishingCompany) async {
+    print(httpRequestHandler.post('/publishing-company', publishingCompany));
+    return httpRequestHandler.post('/publishing-company', publishingCompany);
   }
 }

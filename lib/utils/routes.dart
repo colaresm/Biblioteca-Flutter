@@ -3,12 +3,14 @@ import 'package:libraryWDA/pages/book/books_list_page.dart';
 import 'package:libraryWDA/pages/exam_details/exam_details_page.dart';
 import 'package:libraryWDA/pages/exams/exams_list_page.dart';
 import 'package:libraryWDA/pages/home/home_page.dart';
+import 'package:libraryWDA/pages/publishing_company/publishing_comapanys_list.dart';
 import 'package:libraryWDA/pages/queries_details/book_details.dart';
 import 'package:libraryWDA/controllers/authentication_controller.dart';
 import 'package:libraryWDA/pages/message_notifications/message_view.dart';
 import 'package:libraryWDA/pages/patient_doctors/patient_doctors_list_page.dart';
 import 'package:libraryWDA/pages/doctors_list/doctors_page_list.dart';
 import 'package:libraryWDA/pages/message_notification_detail/widgets/detail_message_view.dart';
+import 'package:libraryWDA/pages/register-and-edit-publishing-company/register-and-edit-publishing-company.dart';
 import 'package:libraryWDA/pages/register_and_edit_book/register_and_edit_book.dart';
 import 'package:libraryWDA/pages/specialties/specialites_list_page.dart';
 import 'package:libraryWDA/pages/doctor_details/doctor_details_page.dart';
@@ -18,17 +20,11 @@ class Routes {
   Widget getPage(String routeName, Object params) {
     List<Widget> pages = [
       HomePage(),
+      PublishingCompanyList(),
       BookPageList(),
-      const ExamsPageList(),
-      const PatietsDoctorsList(),
       BookDetails(params),
       RegisterAndEditBook(),
-      ExamDetailsPage(params),
-      WidgetDetailMessageView(params),
-      DoctorsList(params),
-      const SpecialtiesList(),
-      DoctorDetails(params),
-      PatientSettings()
+      RegisterandEditPublishingCompany()
     ];
     return pages[getPageIndex(routeName)];
   }
@@ -37,28 +33,17 @@ class Routes {
     switch (routeName) {
       case 'home':
         return 0;
-      case 'books-list':
+      case 'publishing-company-list':
         return 1;
-      case 'exams-list':
+      case 'books-list':
         return 2;
-      case 'patient-doctors-list':
-        return 3;
       case 'book-details':
-        return 4;
+        return 3;
       case 'register-and-edit-book':
+        return 4;
+      case 'register-and-edit-publishing-company':
         return 5;
-      case 'exam-details':
-        return 6;
-      case 'messages-details':
-        return 7;
-      case 'doctors-list':
-        return 8;
-      case 'specialites-list':
-        return 9;
-      case 'doctor-details':
-        return 10;
-      case 'patient-settings':
-        return 11;
+
       default:
         return 0;
     }
@@ -69,27 +54,15 @@ class Routes {
       case 0:
         return 'home';
       case 1:
-        return 'books-list';
+        return 'publishing-company-list';
       case 2:
-        return 'exams-list';
+        return 'books-list';
       case 3:
-        return 'patient-doctors-list';
-      case 4:
         return 'book-details';
-      case 5:
+      case 4:
         return 'register-and-edit-book';
-      case 6:
-        return 'exam-details';
-      case 7:
-        return 'messages-details';
-      case 8:
-        return 'doctors-list';
-      case 9:
-        return 'specialites-list';
-      case 10:
-        return 'doctor-details';
-      case 11:
-        return 'patient-settings';
+      case 5:
+        return 'register-and-edit-publishing-company';
       default:
         return 0;
     }

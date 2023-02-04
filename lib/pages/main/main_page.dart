@@ -103,6 +103,10 @@ class _NavBartState extends State<NavBar> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.edit_note_sharp),
+            label: 'Editoras',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.book_sharp),
             label: 'Livros',
           ),
