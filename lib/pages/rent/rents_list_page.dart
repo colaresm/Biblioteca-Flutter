@@ -14,42 +14,40 @@ class _RentListState extends State<RentList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-          child: IndexedStack(
-            index: 0,
-            children: [
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.fromLTRB(3, 0, 10, 5),
-                        child: Backbutton('home', ""),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            padding: EdgeInsets.fromLTRB(40, 8, 5, 2),
-                            child: Text('Lista de aluguéis cadastrados',
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 18)),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        child: RentCardItem(),
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: IndexedStack(
+          index: 0,
+          children: [
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.fromLTRB(3, 0, 10, 5),
+                      child: Backbutton('home', ""),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.fromLTRB(40, 8, 5, 2),
+                          child: Text('Lista de aluguéis cadastrados',
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 18)),
+                        ),
+                      ],
+                    ),
+                    RentCardItem(),
+                  ],
+                )
+              ],
+            ),
+          ],
         ),
-        floatingActionButton: EmergencyButton('books-list', 2));
+      ),
+    );
   }
 }
