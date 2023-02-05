@@ -1,10 +1,10 @@
-import 'package:libraryWDA/pages/queries_details/widgets/query_confirm_body.dart';
-import 'package:libraryWDA/pages/queries_details/widgets/query_details_body.dart';
+import 'package:libraryWDA/pages/book_details/widgets/query_confirm_body.dart';
+import 'package:libraryWDA/pages/book_details/widgets/book_details_body.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:libraryWDA/models/schedule_params.dart';
-import 'package:libraryWDA/pages/queries_details/widgets/query_view_to_confirm_body.dart';
-import 'package:libraryWDA/pages/queries_details/widgets/query_canceled.dart';
+import 'package:libraryWDA/pages/book_details/widgets/query_view_to_confirm_body.dart';
+import 'package:libraryWDA/pages/book_details/widgets/query_canceled.dart';
 
 class BookDetails extends StatefulWidget {
   Object scheduleParams;

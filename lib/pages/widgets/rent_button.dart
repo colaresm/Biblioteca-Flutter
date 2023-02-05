@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
 
-class ScheduleButton extends StatelessWidget {
-  const ScheduleButton({super.key});
+class RentButton extends StatelessWidget {
+  Function function;
+  RentButton(this.function);
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: TextButton.icon(
-        onPressed: () {},
+        onPressed: () {
+          function();
+        },
         style: TextButton.styleFrom(
             fixedSize: const Size(265, 44),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(5),
             ),
             backgroundColor: Colors.black),
         label: const Text(
-          "Agendar consulta",
+          "Alugar livro",
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w500,
@@ -23,8 +26,8 @@ class ScheduleButton extends StatelessWidget {
           ),
         ),
         icon: const Icon(
-          Icons.calendar_today,
-          color: Color.fromARGB(255, 226, 151, 151),
+          Icons.bookmark_add,
+          color: Colors.white,
         ),
       ),
     );

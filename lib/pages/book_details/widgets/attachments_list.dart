@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:libraryWDA/pages/queries_details/widgets/view_button.dart';
+import 'package:libraryWDA/pages/book_details/widgets/view_button.dart';
 
 class attachmentsList extends StatefulWidget {
   String fileName;

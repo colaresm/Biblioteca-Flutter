@@ -3,7 +3,7 @@ import 'package:libraryWDA/pages/widgets/back_button.dart';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:libraryWDA/utils/add_mask.dart';
-import 'package:libraryWDA/pages/widgets/schedule_button.dart';
+import 'package:libraryWDA/pages/widgets/rent_button.dart';
 
 class DoctorDetails extends StatefulWidget {
   var params;
@@ -117,7 +117,6 @@ class _DoctorDetailsState extends State<DoctorDetails> {
         ),
         Padding(
           padding: const EdgeInsets.only(top: 8.0),
-          child: ScheduleButton(),
         ),
       ],
     )));

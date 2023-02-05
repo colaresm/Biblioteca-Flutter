@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:libraryWDA/controllers/publishing_company_controller.dart';
 import 'package:libraryWDA/pages/book/widgets/book_cards_list.dart';
-import 'package:libraryWDA/pages/publishing_company/widgets/publishingCompanyCard.dart';
+import 'package:libraryWDA/pages/publishing_company/widgets/publishing_company_card.dart';
 
 class PublishingCompanyCardItem extends StatefulWidget {
   const PublishingCompanyCardItem({super.key});

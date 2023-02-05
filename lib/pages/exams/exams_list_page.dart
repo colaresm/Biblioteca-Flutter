@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:libraryWDA/controllers/authentication_controller.dart';
 import 'package:libraryWDA/pages/exams/widgets/exam_card_list.dart';
-import 'package:libraryWDA/pages/widgets/schedule_button.dart';
+import 'package:libraryWDA/pages/widgets/rent_button.dart';
 import 'package:libraryWDA/pages/widgets/back_button.dart';
 
 class ExamsPageList extends StatefulWidget {
@@ -46,7 +46,6 @@ class _ExamsPageListState extends State<ExamsPageList> {
               ),
               Column(
                 children: [
-                  ScheduleButton(),
                   Row(
                     children: [
                       Container(

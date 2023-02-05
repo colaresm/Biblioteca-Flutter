@@ -2,6 +2,7 @@ import 'package:libraryWDA/models/doctor_list_item.dart';
 import 'package:libraryWDA/models/exam_list_item.dart';
 import 'package:libraryWDA/models/book_list_item.dart';
 import 'package:libraryWDA/models/publishing_company_list_item.dart';
+import 'package:libraryWDA/models/rent_list_item.dart';
 
 class Mapper {
   toDoctorListItem(data) {
@@ -18,5 +19,9 @@ class Mapper {
 
   toExamListItem(data) {
     return data.map((p) => Exam.fromJson(p)).toList();
+  }
+
+  toRentListItem(data) {
+    return data.map((p) => Rent.fromJson(p)).toList();
   }
 }

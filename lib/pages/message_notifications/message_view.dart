@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:libraryWDA/pages/widgets/emergency_button.dart';
-import 'package:libraryWDA/pages/widgets/schedule_button.dart';
+import 'package:libraryWDA/pages/widgets/rent_button.dart';
 import 'package:libraryWDA/pages/widgets/back_button.dart';
 import 'package:libraryWDA/pages/message_notifications/widgets/list_message_card.dart';
 import '../../controllers/authentication_controller.dart';
@@ -24,10 +24,6 @@ class WidgetMessageView extends StatelessWidget {
             Expanded(
               flex: 0,
               child: Backbutton("home", ""),
-            ),
-            const Expanded(
-              flex: 2,
-              child: ScheduleButton(),
             ),
             Expanded(
               flex: 2,

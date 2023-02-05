@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/services.dart';
-import 'package:libraryWDA/pages/queries_details/widgets/show_PDF_dialog.dart';
+import 'package:libraryWDA/pages/book_details/widgets/show_PDF_dialog.dart';
 import 'package:http/http.dart' as http;
 
 class viewButton extends StatefulWidget {

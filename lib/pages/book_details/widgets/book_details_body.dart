@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/interceptors/get_modifiers.dart';
-import 'package:libraryWDA/pages/queries_details/widgets/attachments_list.dart';
+import 'package:libraryWDA/pages/book_details/widgets/attachments_list.dart';
 import 'package:intl/intl.dart';
+import 'package:libraryWDA/pages/main/main_page.dart';
+import 'package:libraryWDA/pages/register_rent/register_rent.dart';
 import 'package:libraryWDA/pages/widgets/back_button.dart';
 import 'package:libraryWDA/controllers/book_controller.dart';
 import 'dart:convert';
 import 'package:libraryWDA/models/schedule_params.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
+import 'package:libraryWDA/pages/widgets/rent_button.dart';
 
 class BookDetailsBody extends StatefulWidget {
   Object params;
@@ -20,8 +23,18 @@ class _BookDetailsBodyState extends State<BookDetailsBody> {
   String _title = '';
   String _author = '';
   String _releaseDate = '';
+  String _Id = '';
 
   Map<String, dynamic> paramsToMap = {};
+
+  rentBook() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => MainPage(
+              'register-rent', {'bookId': _Id, 'bookName': _title}, 3)),
+    );
+  }
 
   _BookDetailsBodyState(this.params);
 
@@ -36,6 +49,7 @@ class _BookDetailsBodyState extends State<BookDetailsBody> {
           _title = response['title'];
           _author = response['author'];
           _releaseDate = response['releaseDate'];
+          _Id = response['id'];
         });
       }
     });
@@ -71,7 +85,7 @@ class _BookDetailsBodyState extends State<BookDetailsBody> {
                   padding: EdgeInsets.fromLTRB(25, 8, 5, 2),
                   child: const Text('Detalhes do livro',
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                 ),
               ],
             ),
@@ -81,7 +95,7 @@ class _BookDetailsBodyState extends State<BookDetailsBody> {
                   padding: EdgeInsets.fromLTRB(25, 14, 5, 2),
                   child: Text('Título: $_title',
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
                 ),
               ],
             ),
@@ -91,7 +105,7 @@ class _BookDetailsBodyState extends State<BookDetailsBody> {
                   padding: EdgeInsets.fromLTRB(25, 14, 5, 2),
                   child: Text('Autor: $_author',
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
                 ),
               ],
             ),
@@ -103,9 +117,13 @@ class _BookDetailsBodyState extends State<BookDetailsBody> {
                       child: Text(
                           'Data de lançamento: ${getDate(_releaseDate)}',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 12))),
+                              fontWeight: FontWeight.bold, fontSize: 14))),
                 ),
               ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: RentButton(rentBook),
             ),
           ],
         )

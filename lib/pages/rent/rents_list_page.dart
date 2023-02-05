@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:libraryWDA/pages/rent/widgets/rent_cards_list.dart';
 import 'package:libraryWDA/pages/widgets/back_button.dart';
 import 'package:libraryWDA/pages/widgets/emergency_button.dart';
 
-import 'widgets/publishing_company_card_item.dart';
-
-class PublishingCompanyList extends StatefulWidget {
-  const PublishingCompanyList({super.key});
+class RentList extends StatefulWidget {
+  RentList();
 
   @override
-  State<PublishingCompanyList> createState() => _PublishingCompanyListState();
+  State<RentList> createState() => _RentListState();
 }
 
-class _PublishingCompanyListState extends State<PublishingCompanyList> {
+class _RentListState extends State<RentList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,14 +34,14 @@ class _PublishingCompanyListState extends State<PublishingCompanyList> {
                         children: [
                           Container(
                             padding: EdgeInsets.fromLTRB(40, 8, 5, 2),
-                            child: Text('Lista de editoras cadastradas',
+                            child: Text('Lista de alguéis cadastrados',
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 18)),
                           ),
                         ],
                       ),
                       Container(
-                        child: PublishingCompanyCardItem(),
+                        child: RentCardItem(),
                       ),
                     ],
                   )
@@ -51,7 +50,6 @@ class _PublishingCompanyListState extends State<PublishingCompanyList> {
             ],
           ),
         ),
-        floatingActionButton:
-            EmergencyButton('register-and-edit-publishing-company', 1));
+        floatingActionButton: EmergencyButton('books-list', 2));
   }
 }

@@ -3,7 +3,7 @@ import 'package:libraryWDA/controllers/authentication_controller.dart';
 import 'package:libraryWDA/pages/book/widgets/book_card_item.dart';
 import 'package:libraryWDA/pages/widgets/1add_button.dart';
 import 'package:libraryWDA/pages/widgets/emergency_button.dart';
-import 'package:libraryWDA/pages/widgets/schedule_button.dart';
+import 'package:libraryWDA/pages/widgets/rent_button.dart';
 import 'package:libraryWDA/pages/widgets/back_button.dart';
 
 class BookPageList extends StatefulWidget {

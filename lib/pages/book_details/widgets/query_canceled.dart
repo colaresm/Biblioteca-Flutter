@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:libraryWDA/pages/widgets/back_button.dart';
-import 'package:libraryWDA/pages/widgets/schedule_button.dart';
+import 'package:libraryWDA/pages/widgets/rent_button.dart';
 
 class QueryCanceled extends StatefulWidget {
   String status;
@@ -60,7 +60,6 @@ class _QueryCanceledState extends State<QueryCanceled> {
                             textAlign: TextAlign.justify),
                       ),
                       Padding(padding: EdgeInsets.only(top: 10)),
-                      ScheduleButton(),
                     ],
                   ),
                 ),

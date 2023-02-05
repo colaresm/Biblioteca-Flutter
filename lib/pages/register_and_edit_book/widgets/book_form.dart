@@ -4,7 +4,7 @@ import 'package:libraryWDA/controllers/book_controller.dart';
 import 'package:libraryWDA/controllers/patient_controller.dart';
 import 'package:libraryWDA/controllers/publishing_company_controller.dart';
 import 'package:libraryWDA/pages/main/main_page.dart';
-import 'package:libraryWDA/pages/queries_details/widgets/query_confirm_body.dart';
+import 'package:libraryWDA/pages/book_details/widgets/query_confirm_body.dart';
 import 'package:libraryWDA/pages/widgets/cancel_button.dart';
 import 'package:libraryWDA/pages/widgets/default_button.dart';
 import 'package:flutter/material.dart';

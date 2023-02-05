@@ -4,7 +4,7 @@ import 'package:libraryWDA/pages/exam_details/exam_details_page.dart';
 import 'package:libraryWDA/pages/exams/exams_list_page.dart';
 import 'package:libraryWDA/pages/home/home_page.dart';
 import 'package:libraryWDA/pages/publishing_company/publishing_comapanys_list.dart';
-import 'package:libraryWDA/pages/queries_details/book_details.dart';
+import 'package:libraryWDA/pages/book_details/book_details.dart';
 import 'package:libraryWDA/controllers/authentication_controller.dart';
 import 'package:libraryWDA/pages/message_notifications/message_view.dart';
 import 'package:libraryWDA/pages/patient_doctors/patient_doctors_list_page.dart';
@@ -12,6 +12,8 @@ import 'package:libraryWDA/pages/doctors_list/doctors_page_list.dart';
 import 'package:libraryWDA/pages/message_notification_detail/widgets/detail_message_view.dart';
 import 'package:libraryWDA/pages/register-and-edit-publishing-company/register-and-edit-publishing-company.dart';
 import 'package:libraryWDA/pages/register_and_edit_book/register_and_edit_book.dart';
+import 'package:libraryWDA/pages/register_rent/register_rent.dart';
+import 'package:libraryWDA/pages/rent/rents_list_page.dart';
 import 'package:libraryWDA/pages/specialties/specialites_list_page.dart';
 import 'package:libraryWDA/pages/doctor_details/doctor_details_page.dart';
 import 'package:libraryWDA/pages/patient_settings/patient_settings_page.dart';
@@ -22,9 +24,11 @@ class Routes {
       HomePage(),
       PublishingCompanyList(),
       BookPageList(),
+      RentList(),
       BookDetails(params),
       RegisterAndEditBook(),
-      RegisterandEditPublishingCompany()
+      RegisterandEditPublishingCompany(),
+      RegisterRent(params)
     ];
     return pages[getPageIndex(routeName)];
   }
@@ -37,13 +41,16 @@ class Routes {
         return 1;
       case 'books-list':
         return 2;
-      case 'book-details':
+      case 'rents-list':
         return 3;
-      case 'register-and-edit-book':
+      case 'book-details':
         return 4;
-      case 'register-and-edit-publishing-company':
+      case 'register-and-edit-book':
         return 5;
-
+      case 'register-and-edit-publishing-company':
+        return 6;
+      case 'register-rent':
+        return 7;
       default:
         return 0;
     }
@@ -58,11 +65,15 @@ class Routes {
       case 2:
         return 'books-list';
       case 3:
-        return 'book-details';
+        return 'rents-list';
       case 4:
         return 'register-and-edit-book';
       case 5:
+        return 'book-details';
+      case 6:
         return 'register-and-edit-publishing-company';
+      case 7:
+        return 'register-rent';
       default:
         return 0;
     }
