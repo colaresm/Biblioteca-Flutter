@@ -42,7 +42,8 @@ class BookCard extends StatelessWidget {
               ),
               textColor: const Color.fromARGB(255, 255, 255, 255),
               subtitle: Text(
-                decodeUTF8.decodeString(author),
+                // ignore: prefer_interpolation_to_compose_strings
+                'Autor:' + decodeUTF8.decodeString(author),
                 style: const TextStyle(
                   fontWeight: FontWeight.w400,
                 ),

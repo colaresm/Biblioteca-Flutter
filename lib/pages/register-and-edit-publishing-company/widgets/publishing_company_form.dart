@@ -85,12 +85,15 @@ class _PublishingCompanyFormState extends State<PublishingCompanyForm> {
         children: [
           Padding(
             padding: EdgeInsets.only(left: 8.0),
-            child: Text('Autor'),
+            child: Text('Autor', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 1, color: Colors.black),
+                  ),
                   contentPadding:
                       EdgeInsets.only(left: 23, right: 23, top: 20, bottom: 20),
                   labelText: 'Digite o nome da editora',

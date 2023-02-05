@@ -56,6 +56,7 @@ dependencies:
   mask_text_input_formatter: ^2.4.0
   flutter_multi_formatter: ^2.2.1
   url_launcher: ^6.1.8
+  carousel_slider: ^4.2.1
 
 
  
@@ -94,6 +95,11 @@ flutter:
     - assets/images/logo.png
     - assets/images/confirmation.png
     - assets/images/login-image.png
+    - assets/images/cdz.jpg
+    - assets/images/java.jpg
+    - assets/images/lost.jpg
+    - assets/images/livro.jpg
+    - assets/images/machine.jpg
     - assets/images/header.png
   
 

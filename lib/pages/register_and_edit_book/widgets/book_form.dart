@@ -152,12 +152,15 @@ class BookFormState extends State<BookForm> {
         children: [
           Padding(
             padding: EdgeInsets.only(left: 8.0),
-            child: Text('Autor'),
+            child: Text('Autor', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 1, color: Colors.black),
+                  ),
                   contentPadding:
                       EdgeInsets.only(left: 23, right: 23, top: 20, bottom: 20),
                   labelText: 'Digite o nome autor do livro',
@@ -171,7 +174,8 @@ class BookFormState extends State<BookForm> {
           ),
           Padding(
             padding: EdgeInsets.only(left: 8.0),
-            child: Text('Editora'),
+            child:
+                Text('Editora', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
           Row(
             children: [
@@ -222,7 +226,7 @@ class BookFormState extends State<BookForm> {
                             )
                           : Container(
                               child: Center(
-                                child: Text('Carregando estados...'),
+                                child: Text('Carregando dados...'),
                               ),
                             );
                     },
@@ -233,13 +237,17 @@ class BookFormState extends State<BookForm> {
           ),
           Padding(
             padding: EdgeInsets.only(left: 8.0),
-            child: Text('Quantidade'),
+            child: Text('Quantidade',
+                style: TextStyle(fontWeight: FontWeight.bold)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               inputFormatters: getMask('three-digits'),
               decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 1, color: Colors.black),
+                  ),
                   contentPadding:
                       EdgeInsets.only(left: 23, right: 23, top: 20, bottom: 20),
                   labelText: 'Digite a quantidade de livros',
@@ -253,12 +261,16 @@ class BookFormState extends State<BookForm> {
           ),
           Padding(
             padding: EdgeInsets.only(left: 8.0),
-            child: Text('Título'),
+            child:
+                Text('Título', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 1, color: Colors.black),
+                  ),
                   contentPadding:
                       EdgeInsets.only(left: 23, right: 23, top: 20, bottom: 20),
                   labelText: 'Digite o título do livro',
@@ -272,12 +284,16 @@ class BookFormState extends State<BookForm> {
           ),
           Padding(
             padding: EdgeInsets.only(left: 8.0),
-            child: Text('Data de lançamento'),
+            child: Text('Data de lançamento',
+                style: TextStyle(fontWeight: FontWeight.bold)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               decoration: InputDecoration(
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 1, color: Colors.black),
+                  ),
                   contentPadding:
                       EdgeInsets.only(left: 23, right: 23, top: 20, bottom: 20),
                   labelText: dateToBrazilianFormat(DateTime.now()),

@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:libraryWDA/controllers/anamnese_controller.dart';
 import 'package:libraryWDA/pages/anamnese/perform_anamnese.dart';
@@ -6,6 +7,7 @@ import 'package:libraryWDA/pages/anamnese/widgets/anamnese_sumary.dart';
 import 'package:libraryWDA/pages/home/widgets/outlined_card_small.dart';
 import 'package:libraryWDA/pages/main/main_page.dart';
 import 'package:libraryWDA/controllers/authentication_controller.dart';
+import 'package:libraryWDA/pages/widgets/carousel_slider.dart';
 import 'package:libraryWDA/pages/widgets/emergency_button.dart';
 import './widgets/outlined_card.dart';
 
@@ -14,7 +16,20 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+final List<String> imgList = [
+  "assets/images/lost.jpg",
+  "assets/images/cdz.jpg",
+  "assets/images/livro.jpg",
+  "assets/images/java.jpg"
+];
+
 class _HomePageState extends State<HomePage> {
+  late PageController _pageController;
+  @override
+  void initState() {
+    _pageController = PageController(viewportFraction: 0.8);
+  }
+
   viewMessages() {
     Navigator.push(
       context,
@@ -66,9 +81,10 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
-                margin: const EdgeInsets.only(left: 25.0, right: 25.0),
+                height: 200,
+                margin: const EdgeInsets.only(left: 10.0, right: 10.0),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(4),
+                  borderRadius: BorderRadius.circular(20),
                   child: SizedBox.fromSize(
                     size: Size.fromRadius(60),
                     child: Image.asset('assets/images/header.png',
@@ -76,52 +92,37 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(15.0),
-                    child: const Text(
-                      'Alugéis',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                    ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                child: Center(
+                    child: Text(
+                  'Conheça nosso acervo',
+                  style: TextStyle(
+                    fontSize: 28,
+                    foreground: Paint()
+                      ..style = PaintingStyle.stroke
+                      ..strokeWidth = 2
+                      ..color = Colors.black,
                   ),
-                ],
+                )),
               ),
               Container(
-                padding: const EdgeInsets.only(left: 16.0),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.fromLTRB(0, 10, 3, 10),
-                        child: OutlinedCard(
-                            'Alugar livro', Icons.menu_book, goToBooks),
-                      ),
-                    )
-                  ],
+                  child: CarouselSlider(
+                options: CarouselOptions(
+                  autoPlay: true,
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(15.0),
-                child: const Text('Livros',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
-              ),
-              Container(
-                padding: const EdgeInsets.only(left: 16.0),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        margin: const EdgeInsets.fromLTRB(0, 10, 3, 10),
-                        child: OutlinedCard('Ver Livros',
-                            Icons.book_online_outlined, goToBooks),
-                      ),
-                    )
-                  ],
-                ),
-              ),
+                items: imgList
+                    .map((item) => Container(
+                          child: Center(
+                              child: Image.asset(
+                            item,
+                            fit: BoxFit.fill,
+                            width: 1000,
+                            height: 1000,
+                          )),
+                        ))
+                    .toList(),
+              )),
             ],
           ),
         ),

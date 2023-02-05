@@ -64,7 +64,7 @@ class _RecoverPasswordComponentState extends State<RecoverPasswordComponent> {
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 35,
-                        color: companyColors.shade300),
+                        color: Colors.black),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
@@ -90,7 +90,7 @@ class _RecoverPasswordComponentState extends State<RecoverPasswordComponent> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 color: widget.step == 1
-                                    ? companyColors.shade900
+                                    ? Colors.black
                                     : companyColors.shade800,
                               ),
                               child: Center(
@@ -107,7 +107,7 @@ class _RecoverPasswordComponentState extends State<RecoverPasswordComponent> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 color: widget.step == 2
-                                    ? companyColors.shade900
+                                    ? Colors.black
                                     : companyColors.shade800,
                               ),
                               child: Center(
@@ -124,7 +124,7 @@ class _RecoverPasswordComponentState extends State<RecoverPasswordComponent> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 color: widget.step == 3
-                                    ? companyColors.shade900
+                                    ? Colors.black
                                     : companyColors.shade800,
                               ),
                               child: Center(
@@ -192,7 +192,7 @@ class _RecoverPasswordComponentState extends State<RecoverPasswordComponent> {
                         hintText: widget.inputTextLabel,
                         border: OutlineInputBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(20)))),
+                                BorderRadius.all(Radius.circular(5)))),
                   ),
                 ],
               ),
@@ -204,7 +204,7 @@ class _RecoverPasswordComponentState extends State<RecoverPasswordComponent> {
                       style: ElevatedButton.styleFrom(
                           backgroundColor: companyColors.shade800,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(50),
+                            borderRadius: BorderRadius.circular(5),
                           )),
                       child: const Padding(
                         padding: EdgeInsets.all(12),
@@ -225,9 +225,9 @@ class _RecoverPasswordComponentState extends State<RecoverPasswordComponent> {
                     child: isDisabled
                         ? ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                backgroundColor: companyColors.shade900,
+                                backgroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50),
+                                  borderRadius: BorderRadius.circular(5),
                                 )),
                             child: Padding(
                                 padding: EdgeInsets.all(12),
@@ -244,9 +244,9 @@ class _RecoverPasswordComponentState extends State<RecoverPasswordComponent> {
                           )
                         : ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                backgroundColor: companyColors.shade900,
+                                backgroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50),
+                                  borderRadius: BorderRadius.circular(5),
                                 )),
                             child: const Padding(
                               padding: EdgeInsets.all(12),

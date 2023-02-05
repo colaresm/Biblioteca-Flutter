@@ -32,10 +32,10 @@ class _RentCardState extends State<RentCard> {
   }
 
   getColor(rentStatus) {
-    if (rentStatus == 'RENTED') return Colors.blueAccent;
-    if (rentStatus == 'DELAY') return Colors.redAccent;
+    if (rentStatus == 'RENTED') return Colors.blue[900];
+    if (rentStatus == 'DELAY') return Colors.red[900];
     if (rentStatus == 'ONTIME')
-      return Colors.greenAccent;
+      return Colors.green[900];
     else
       return Colors.grey;
   }
@@ -57,7 +57,7 @@ class _RentCardState extends State<RentCard> {
     return Container(
       height: MediaQuery.of(context).size.height * 0.11,
       child: Card(
-        elevation: 0,
+        elevation: 5,
         color: getColor(rentStatus),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         child: Column(

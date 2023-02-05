@@ -49,19 +49,19 @@ class _PublishingCompanyCardState extends State<PublishingCompanyCard> {
                 ),
               ),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MainPage(
-                        'book-details',
-                        {
-                          "id": 'id',
-                          "title": decodeUTF8.decodeString('title'),
-                          "author": decodeUTF8.decodeString('author'),
-                        },
-                        1),
-                  ),
-                );
+                //   Navigator.push(
+                //   context,
+                // MaterialPageRoute(
+                // builder: (context) => MainPage(
+                //   'book-details',
+                // {
+                // "id": 'id',
+                //"title": decodeUTF8.decodeString('title'),
+                ///"author": decodeUTF8.decodeString('author'),
+                //},
+                //1),
+                //),
+                //);
               },
             ),
           ],

@@ -73,7 +73,7 @@ class _LoginFormState extends State<LoginForm> {
                   label: Text('Email'),
                   hintText: 'Email',
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)))),
+                      borderRadius: BorderRadius.all(Radius.circular(5)))),
             ),
             gap(),
             TextFormField(
@@ -97,7 +97,7 @@ class _LoginFormState extends State<LoginForm> {
                   label: Text('Senha'),
                   hintText: 'Senha',
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)))),
+                      borderRadius: BorderRadius.all(Radius.circular(5)))),
             ),
             gap(),
             CheckboxListTile(
@@ -124,7 +124,7 @@ class _LoginFormState extends State<LoginForm> {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(5),
                     )),
                 child: const Padding(
                   padding: EdgeInsets.all(12),

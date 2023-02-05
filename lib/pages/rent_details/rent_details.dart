@@ -133,7 +133,7 @@ class _RentDetaislState extends State<RentDetaisl> {
                 Container(
                   padding: EdgeInsets.fromLTRB(25, 14, 5, 2),
                   child: Expanded(
-                      child: Text('Data de devolução ${getDate(_returnDate)}',
+                      child: Text('Data de devolução: ${getDate(_returnDate)}',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 14))),
                 ),

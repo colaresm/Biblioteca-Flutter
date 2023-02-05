@@ -18,7 +18,10 @@ class _CancelButtonState extends State<CancelButton> {
           function();
         },
         child: Text('CANCELAR',
-            style: TextStyle(fontSize: 18, color: Colors.white)),
+            style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: Colors.white)),
         style: TextButton.styleFrom(
             fixedSize: const Size(265, 44),
             shape: RoundedRectangleBorder(
