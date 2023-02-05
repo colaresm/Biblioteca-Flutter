@@ -60,6 +60,7 @@ class HttpRequestHandler {
       headers: getHeaders(),
       body: jsonEncode(body),
     );
+    if (response.statusCode == 400) return throw Exception('Erro');
   }
 
   geListWithBody(url, params, Function data) async {

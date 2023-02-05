@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:libraryWDA/pages/main/main_page.dart';
 import 'package:libraryWDA/utils/utf8_decode.dart';
+import 'package:intl/intl.dart';
 
 class RentCard extends StatefulWidget {
   String id;
@@ -25,13 +26,39 @@ class _RentCardState extends State<RentCard> {
   _RentCardState(this.id, this.bookName, this.clientName, this.rentStatus,
       this.returnDate);
   DecodeUTF8 decodeUTF8 = new DecodeUTF8();
+  dateToBrazilianFormat(date) {
+    var outputFormat = DateFormat('dd/MM/yyyy');
+    return outputFormat.format(DateTime.parse(date));
+  }
+
+  getColor(rentStatus) {
+    if (rentStatus == 'RENTED') return Colors.blueAccent;
+    if (rentStatus == 'DELAY') return Colors.redAccent;
+    if (rentStatus == 'ONTIME')
+      return Colors.greenAccent;
+    else
+      return Colors.grey;
+  }
+
+  getText(rentStatus) {
+    if (rentStatus == 'RENTED') {
+      return decodeUTF8.decodeString('Retorno em :') +
+          dateToBrazilianFormat(returnDate).toString();
+    }
+    if (rentStatus == 'DELAY') return 'Devolvido com atraso';
+    if (rentStatus == 'ONTIME')
+      return 'Devolvido';
+    else
+      return '';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.11,
       child: Card(
         elevation: 0,
-        color: Colors.black,
+        color: getColor(rentStatus),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -50,7 +77,7 @@ class _RentCardState extends State<RentCard> {
               ),
               textColor: const Color.fromARGB(255, 255, 255, 255),
               subtitle: Text(
-                decodeUTF8.decodeString('Retorno previsto em:$returnDate'),
+                getText(rentStatus),
                 style: const TextStyle(
                   fontWeight: FontWeight.w400,
                 ),
@@ -59,14 +86,8 @@ class _RentCardState extends State<RentCard> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MainPage(
-                        'book-details',
-                        {
-                          "id": 'id',
-                          "title": decodeUTF8.decodeString('title'),
-                          "author": decodeUTF8.decodeString('author'),
-                        },
-                        1),
+                    builder: (context) =>
+                        MainPage('rent-details', {'id': id}, 3),
                   ),
                 );
               },

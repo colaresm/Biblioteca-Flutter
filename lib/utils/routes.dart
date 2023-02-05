@@ -14,6 +14,7 @@ import 'package:libraryWDA/pages/register-and-edit-publishing-company/register-a
 import 'package:libraryWDA/pages/register_and_edit_book/register_and_edit_book.dart';
 import 'package:libraryWDA/pages/register_rent/register_rent.dart';
 import 'package:libraryWDA/pages/rent/rents_list_page.dart';
+import 'package:libraryWDA/pages/rent_details/rent_details.dart';
 import 'package:libraryWDA/pages/specialties/specialites_list_page.dart';
 import 'package:libraryWDA/pages/doctor_details/doctor_details_page.dart';
 import 'package:libraryWDA/pages/patient_settings/patient_settings_page.dart';
@@ -28,7 +29,8 @@ class Routes {
       BookDetails(params),
       RegisterAndEditBook(),
       RegisterandEditPublishingCompany(),
-      RegisterRent(params)
+      RegisterRent(params),
+      RentDetaisl(params)
     ];
     return pages[getPageIndex(routeName)];
   }
@@ -51,6 +53,8 @@ class Routes {
         return 6;
       case 'register-rent':
         return 7;
+      case 'rent-details':
+        return 8;
       default:
         return 0;
     }
@@ -74,6 +78,8 @@ class Routes {
         return 'register-and-edit-publishing-company';
       case 7:
         return 'register-rent';
+      case 8:
+        return 'rent-details';
       default:
         return 0;
     }

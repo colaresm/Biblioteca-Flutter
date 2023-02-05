@@ -25,4 +25,13 @@ class RentController extends GetxController {
   static Future<dynamic> create(rent) async {
     return httpRequestHandler.post('/rents', rent);
   }
+
+  static Future<dynamic> getRent(id) async {
+    return httpRequestHandler.getItemWithBody('/rents/', id);
+  }
+
+  static Future<dynamic> devolution(id) async {
+    print(id);
+    return httpRequestHandler.put('/rents', id);
+  }
 }

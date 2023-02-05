@@ -57,7 +57,6 @@ class _BookDetailsBodyState extends State<BookDetailsBody> {
 
   @override
   Widget build(BuildContext context) {
-    ScheduleParams scheduleItems = ScheduleParams.fromJson(paramsToMap);
     getDate(date) {
       if (date != null) {
         var tag = Localizations.maybeLocaleOf(context)?.toLanguageTag();

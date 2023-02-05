@@ -34,7 +34,7 @@ class _RentListState extends State<RentList> {
                         children: [
                           Container(
                             padding: EdgeInsets.fromLTRB(40, 8, 5, 2),
-                            child: Text('Lista de alguéis cadastrados',
+                            child: Text('Lista de aluguéis cadastrados',
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 18)),
                           ),

@@ -29,7 +29,7 @@ class _EmergencyButtonState extends State<EmergencyButton> {
           ),
         );
       },
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.amber,
       child: Icon(Icons.add),
     );
   }

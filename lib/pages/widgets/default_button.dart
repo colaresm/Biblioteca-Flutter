@@ -32,8 +32,7 @@ class _DefaultButtonState extends State<DefaultButton> {
           label: Text(
             label.toUpperCase(),
             style: TextStyle(
-              fontSize: 18,
-              fontFamily: "Fredoka",
+              fontSize: 14,
               fontWeight: FontWeight.w500,
               color: Colors.white,
             ),
