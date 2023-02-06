@@ -57,23 +57,33 @@ class BookFormState extends State<BookForm> {
   performAnamnese() {
     if (_formKey.currentState!.validate()) {
       adjustDate();
-      BookController.create(_book);
-
-      Get.snackbar('Sucesso', 'Livro cadastrado com sucesso',
-          backgroundColor: Colors.greenAccent,
-          borderWidth: 2,
-          icon: Icon(
-            Icons.done,
-            color: Colors.white,
-          ),
-          colorText: Colors.white,
-          borderColor: Colors.white);
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => MainPage("home", "", 0),
-        ),
-      );
+      BookController.create(_book)
+          .then((value) => {
+                Get.snackbar('Sucesso', 'Livro cadastrado com sucesso',
+                    backgroundColor: Colors.greenAccent,
+                    borderWidth: 2,
+                    icon: Icon(
+                      Icons.done,
+                      color: Colors.white,
+                    ),
+                    colorText: Colors.white,
+                    borderColor: Colors.white),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MainPage("home", "", 0),
+                  ),
+                )
+              })
+          .catchError((error) => Get.snackbar('Erro', 'Erro ao cadastrar livro',
+              backgroundColor: companyColors.shade600,
+              icon: Icon(
+                Icons.error,
+                color: Colors.white,
+              ),
+              borderWidth: 2,
+              colorText: Colors.white,
+              borderColor: Colors.white));
     }
   }
 
