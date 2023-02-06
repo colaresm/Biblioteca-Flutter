@@ -108,18 +108,7 @@ class _BookDetailsBodyState extends State<BookDetailsBody> {
                 ),
               ],
             ),
-            Row(
-              children: [
-                Container(
-                  padding: EdgeInsets.fromLTRB(25, 14, 5, 2),
-                  child: Expanded(
-                      child: Text(
-                          'Data de lançamento: ${getDate(_releaseDate)}',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14))),
-                ),
-              ],
-            ),
+            
             Padding(
               padding: const EdgeInsets.only(top: 8.0),
               child: RentButton(rentBook),

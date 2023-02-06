@@ -100,8 +100,7 @@ class _RentFormState extends State<RentForm> {
           ),
           Padding(
               padding: EdgeInsets.only(left: 8.0),
-              child: Expanded(
-                  child: Row(
+              child: Row(
                 children: [
                   Text('Selecione o tempo de empréstimo:'),
                   Padding(
@@ -141,7 +140,7 @@ class _RentFormState extends State<RentForm> {
                         ),
                       )),
                 ],
-              ))),
+              )),
           Padding(
               padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
               child: Column(

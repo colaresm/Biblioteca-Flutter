@@ -38,6 +38,7 @@ class _BookCardItemState extends State<BookCardItem> {
               return ListView.builder(
                 itemCount: snapshot.data?.length ?? 0,
                 scrollDirection: Axis.vertical,
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 35, vertical: 10),

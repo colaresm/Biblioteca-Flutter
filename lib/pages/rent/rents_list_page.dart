@@ -40,7 +40,7 @@ class _RentListState extends State<RentList> {
                         ),
                       ],
                     ),
-                    RentCardItem(),
+                Container(child: SingleChildScrollView(child: RentCardItem())),
                   ],
                 )
               ],

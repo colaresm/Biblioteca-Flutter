@@ -86,7 +86,9 @@ class _RentDetaislState extends State<RentDetaisl> {
       }
     }
 
-    return Column(
+    return Scaffold(
+      backgroundColor: Colors.amberAccent,
+      body: Column(
       children: [
         Row(
           children: [
@@ -128,17 +130,7 @@ class _RentDetaislState extends State<RentDetaisl> {
                 ),
               ],
             ),
-            Row(
-              children: [
-                Container(
-                  padding: EdgeInsets.fromLTRB(25, 14, 5, 2),
-                  child: Expanded(
-                      child: Text('Data de devolução: ${getDate(_returnDate)}',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14))),
-                ),
-              ],
-            ),
+           
           ],
         ),
         _rentStatus == "RENTED"
@@ -151,6 +143,6 @@ class _RentDetaislState extends State<RentDetaisl> {
                 devolutionBook)
             : Container()
       ],
-    );
+    ));
   }
 }

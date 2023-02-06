@@ -37,6 +37,7 @@ class _PublishingCompanyCardItemState extends State<PublishingCompanyCardItem> {
             } else {
               return ListView.builder(
                 itemCount: snapshot.data?.length ?? 0,
+                physics: NeverScrollableScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 padding:

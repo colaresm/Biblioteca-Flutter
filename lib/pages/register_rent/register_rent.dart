@@ -14,9 +14,8 @@ class _RegisterRentState extends State<RegisterRent> {
   _RegisterRentState(this.params);
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        child: Container(
+    return  Container(
       child: RentForm(params),
-    ));
+    );
   }
 }
